@@ -3,21 +3,118 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>LAN Scout</title>
-  <meta name="description" content="LAN Scout support and privacy information.">
+  <title>LAN Scout - Local network scanner</title>
+  <meta name="description" content="LAN Scout is a native local network scanner for iPhone, iPad, and Mac.">
+  <meta property="og:title" content="LAN Scout">
+  <meta property="og:description" content="Find devices, ports, vendors, and web management links on your local network.">
+  <meta property="og:image" content="https://lanscout.brittan.co/assets/app-icon.png">
+  <link rel="icon" href="./assets/app-icon.png">
+  <link rel="apple-touch-icon" href="./assets/app-icon.png">
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-  <main class="shell">
-    <section class="hero">
-      <p class="eyebrow">LAN Scout</p>
-      <h1>Local network scanning for iPhone, iPad, and Mac.</h1>
-      <p class="lede">Find devices on your current network, review open services, and export scan results for troubleshooting or documentation.</p>
-      <div class="actions">
-        <a href="./support/">Support</a>
-        <a href="./privacy/">Privacy Policy</a>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="LAN Scout home">
+      <img src="./assets/app-icon.png" alt="" width="44" height="44">
+      <span>LAN Scout</span>
+    </a>
+    <nav class="site-nav" aria-label="Site navigation">
+      <a href="./support/">Support</a>
+      <a href="./privacy/">Privacy</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero shell">
+      <div class="hero-copy">
+        <p class="eyebrow">Native LAN scanning</p>
+        <h1>Map the network in front of you.</h1>
+        <p class="lede">LAN Scout finds active IP addresses, open services, likely device types, web management links, and export-ready scan results from your iPhone, iPad, or Mac.</p>
+        <div class="actions">
+          <a class="button primary" href="./support/">Get support</a>
+          <a class="button secondary" href="./privacy/">Read privacy policy</a>
+        </div>
+        <dl class="trust-strip" aria-label="LAN Scout privacy summary">
+          <div>
+            <dt>No account</dt>
+            <dd>Open and scan</dd>
+          </div>
+          <div>
+            <dt>No analytics</dt>
+            <dd>No background reporting</dd>
+          </div>
+          <div>
+            <dt>Local first</dt>
+            <dd>Exports are your choice</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="product-stage" aria-label="LAN Scout app preview">
+        <div class="radar-card">
+          <img class="hero-icon" src="./assets/app-icon.png" alt="LAN Scout app icon" width="156" height="156">
+          <div class="scan-readout">
+            <span>Subnet</span>
+            <strong>192.168.1.0/24</strong>
+          </div>
+          <div class="scan-readout">
+            <span>Found</span>
+            <strong>Devices, ports, web links</strong>
+          </div>
+        </div>
+        <figure class="phone-frame phone-front">
+          <img src="./assets/iphone-results.png" alt="LAN Scout results screen showing discovered network devices">
+        </figure>
+        <figure class="phone-frame phone-back">
+          <img src="./assets/iphone-scan.png" alt="LAN Scout scan setup screen">
+        </figure>
       </div>
     </section>
+
+    <section class="band">
+      <div class="shell feature-grid" aria-label="LAN Scout features">
+        <article>
+          <span class="feature-kicker">01</span>
+          <h2>Current subnet by default</h2>
+          <p>Start with the network you are already connected to, including subnet and gateway context where the platform exposes it.</p>
+        </article>
+        <article>
+          <span class="feature-kicker">02</span>
+          <h2>Ports and management links</h2>
+          <p>Highlight common services and turn likely web management endpoints into direct browser links.</p>
+        </article>
+        <article>
+          <span class="feature-kicker">03</span>
+          <h2>Vendor and device hints</h2>
+          <p>Use hostnames, Bonjour services, MAC vendors where available, and open ports to make scan results easier to read.</p>
+        </article>
+        <article>
+          <span class="feature-kicker">04</span>
+          <h2>Clean exports</h2>
+          <p>Create CSV or formatted Excel files with scan details and clickable device links for troubleshooting notes.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="shell showcase">
+      <div>
+        <p class="eyebrow">Built for practical checks</p>
+        <h2>Designed for the moment you need a spare IP, a router page, or proof of what is online.</h2>
+      </div>
+      <figure class="tablet-frame">
+        <img src="./assets/ipad-overview.png" alt="LAN Scout on iPad showing the scan dashboard and results">
+      </figure>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <span>LAN Scout</span>
+      <nav aria-label="Footer navigation">
+        <a href="./support/">Support</a>
+        <a href="./privacy/">Privacy</a>
+      </nav>
+    </div>
+  </footer>
 </body>
 </html>

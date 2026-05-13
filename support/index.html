@@ -4,35 +4,67 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>LAN Scout Support</title>
-  <meta name="description" content="Support information for LAN Scout.">
+  <meta name="description" content="Support information and frequently asked questions for LAN Scout.">
+  <link rel="icon" href="../assets/app-icon.png">
+  <link rel="apple-touch-icon" href="../assets/app-icon.png">
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-  <main class="shell doc">
-    <a class="back" href="../">LAN Scout</a>
-    <h1>Support</h1>
-    <p class="lede compact">For help with LAN Scout, use the support button below.</p>
-    <button class="contact-button" type="button" data-contact-local="support" data-contact-domain-a="brittan" data-contact-domain-b="co">Email support</button>
+  <header class="site-header">
+    <a class="brand" href="../" aria-label="LAN Scout home">
+      <img src="../assets/app-icon.png" alt="" width="44" height="44">
+      <span>LAN Scout</span>
+    </a>
+    <nav class="site-nav" aria-label="Site navigation">
+      <a aria-current="page" href="./">Support</a>
+      <a href="../privacy/">Privacy</a>
+    </nav>
+  </header>
 
-    <h2>Why does LAN Scout ask for Local Network access?</h2>
-    <p>LAN Scout needs Local Network access to discover devices and services on the network your iPhone, iPad, or Mac is currently connected to.</p>
+  <main class="shell doc-page">
+    <section class="doc-hero">
+      <img src="../assets/app-icon.png" alt="LAN Scout app icon" width="104" height="104">
+      <div>
+        <p class="eyebrow">Support</p>
+        <h1>Help with LAN Scout.</h1>
+        <p class="lede compact">Questions about local network permissions, scan results, or exports can be sent through the support button.</p>
+        <button class="contact-button" type="button" data-contact-local="support" data-contact-domain-a="brittan" data-contact-domain-b="co" data-contact-subject="LAN Scout Support">Email support</button>
+      </div>
+    </section>
 
-    <h2>Why do iPhone and iPad scans differ from Mac scans?</h2>
-    <p>iOS and iPadOS restrict some low-level network information. LAN Scout uses the available local network APIs and probes on each platform, so a Mac may show details that iPhone and iPad cannot access directly.</p>
-
-    <h2>Are scan results sent anywhere?</h2>
-    <p>No. LAN Scout processes scan results on your device. Results leave your device only if you choose to export or share them.</p>
-
-    <h2>Why are some devices missing names or vendors?</h2>
-    <p>Some devices do not advertise hostnames or services, and some platforms restrict MAC address access. LAN Scout shows the best available details for each discovered device.</p>
+    <section class="answer-list" aria-label="Frequently asked questions">
+      <article>
+        <span class="feature-kicker">Local Network</span>
+        <h2>Why does LAN Scout ask for Local Network access?</h2>
+        <p>LAN Scout needs Local Network access to discover devices and services on the network your iPhone, iPad, or Mac is currently connected to.</p>
+      </article>
+      <article>
+        <span class="feature-kicker">Platform limits</span>
+        <h2>Why do iPhone and iPad scans differ from Mac scans?</h2>
+        <p>iOS and iPadOS restrict some low-level network information. LAN Scout uses the available local network APIs and probes on each platform, so a Mac may show details that iPhone and iPad cannot access directly.</p>
+      </article>
+      <article>
+        <span class="feature-kicker">Privacy</span>
+        <h2>Are scan results sent anywhere?</h2>
+        <p>No. LAN Scout processes scan results on your device. Results leave your device only if you choose to export or share them.</p>
+      </article>
+      <article>
+        <span class="feature-kicker">Discovery</span>
+        <h2>Why are some devices missing names or vendors?</h2>
+        <p>Some devices do not advertise hostnames or services, and some platforms restrict MAC address access. LAN Scout shows the best available details for each discovered device.</p>
+      </article>
+    </section>
   </main>
-  <script>
-    document.querySelectorAll(".contact-button").forEach((button) => {
-      button.addEventListener("click", () => {
-        const address = `${button.dataset.contactLocal}@${button.dataset.contactDomainA}.${button.dataset.contactDomainB}`;
-        window.location.href = `mailto:${address}?subject=LAN%20Scout%20Support`;
-      });
-    });
-  </script>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <span>LAN Scout</span>
+      <nav aria-label="Footer navigation">
+        <a href="./">Support</a>
+        <a href="../privacy/">Privacy</a>
+      </nav>
+    </div>
+  </footer>
+  <script src="../contact.js"></script>
 </body>
 </html>

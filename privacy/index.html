@@ -5,43 +5,89 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>LAN Scout Privacy Policy</title>
   <meta name="description" content="Privacy policy for LAN Scout.">
+  <link rel="icon" href="../assets/app-icon.png">
+  <link rel="apple-touch-icon" href="../assets/app-icon.png">
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-  <main class="shell doc">
-    <a class="back" href="../">LAN Scout</a>
-    <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: 13 May 2026</p>
+  <header class="site-header">
+    <a class="brand" href="../" aria-label="LAN Scout home">
+      <img src="../assets/app-icon.png" alt="" width="44" height="44">
+      <span>LAN Scout</span>
+    </a>
+    <nav class="site-nav" aria-label="Site navigation">
+      <a href="../support/">Support</a>
+      <a aria-current="page" href="./">Privacy</a>
+    </nav>
+  </header>
 
-    <h2>Overview</h2>
-    <p>LAN Scout is a local network scanner. It is designed to inspect devices and services on the network your device is currently connected to.</p>
+  <main class="shell doc-page">
+    <section class="doc-hero">
+      <img src="../assets/app-icon.png" alt="LAN Scout app icon" width="104" height="104">
+      <div>
+        <p class="eyebrow">Privacy Policy</p>
+        <h1>Local scans stay local.</h1>
+        <p class="updated">Last updated: 13 May 2026</p>
+      </div>
+    </section>
 
-    <h2>Data Collection</h2>
-    <p>LAN Scout does not collect, store, sell, or transmit personal data to the developer or to third-party analytics services.</p>
+    <section class="privacy-summary" aria-label="Privacy summary">
+      <div>
+        <strong>No tracking</strong>
+        <span>No ads, analytics SDKs, or cross-app tracking.</span>
+      </div>
+      <div>
+        <strong>No account</strong>
+        <span>LAN Scout does not require sign-in.</span>
+      </div>
+      <div>
+        <strong>No server upload</strong>
+        <span>Scan results remain on your device unless you export them.</span>
+      </div>
+    </section>
 
-    <h2>Local Network Scans</h2>
-    <p>When you run a scan, LAN Scout may detect local network information such as IP addresses, hostnames, MAC addresses where the platform makes them available, hardware vendors, open ports, and possible web management links. This information is processed on your device to show scan results.</p>
-
-    <h2>Exports</h2>
-    <p>You can export scan results to CSV or Excel files. Exported files are created only when you choose to export them. You control where those files are saved or shared.</p>
-
-    <h2>Network Access</h2>
-    <p>LAN Scout requests Local Network permission because discovering devices and services on your current network is the app's core feature.</p>
-
-    <h2>Third Parties</h2>
-    <p>LAN Scout does not include advertising SDKs, tracking SDKs, or analytics SDKs.</p>
-
-    <h2>Contact</h2>
-    <p>For support or privacy questions, use the contact button below.</p>
-    <button class="contact-button" type="button" data-contact-local="support" data-contact-domain-a="brittan" data-contact-domain-b="co">Contact support</button>
+    <section class="policy-body">
+      <article>
+        <h2>Overview</h2>
+        <p>LAN Scout is a local network scanner. It is designed to inspect devices and services on the network your device is currently connected to.</p>
+      </article>
+      <article>
+        <h2>Data Collection</h2>
+        <p>LAN Scout does not collect, store, sell, or transmit personal data to the developer or to third-party analytics services.</p>
+      </article>
+      <article>
+        <h2>Local Network Scans</h2>
+        <p>When you run a scan, LAN Scout may detect local network information such as IP addresses, hostnames, MAC addresses where the platform makes them available, hardware vendors, open ports, and possible web management links. This information is processed on your device to show scan results.</p>
+      </article>
+      <article>
+        <h2>Exports</h2>
+        <p>You can export scan results to CSV or Excel files. Exported files are created only when you choose to export them. You control where those files are saved or shared.</p>
+      </article>
+      <article>
+        <h2>Network Access</h2>
+        <p>LAN Scout requests Local Network permission because discovering devices and services on your current network is the app's core feature.</p>
+      </article>
+      <article>
+        <h2>Third Parties</h2>
+        <p>LAN Scout does not include advertising SDKs, tracking SDKs, or analytics SDKs.</p>
+      </article>
+      <article>
+        <h2>Contact</h2>
+        <p>For support or privacy questions, use the contact button below.</p>
+        <button class="contact-button" type="button" data-contact-local="support" data-contact-domain-a="brittan" data-contact-domain-b="co" data-contact-subject="LAN Scout Privacy">Contact support</button>
+      </article>
+    </section>
   </main>
-  <script>
-    document.querySelectorAll(".contact-button").forEach((button) => {
-      button.addEventListener("click", () => {
-        const address = `${button.dataset.contactLocal}@${button.dataset.contactDomainA}.${button.dataset.contactDomainB}`;
-        window.location.href = `mailto:${address}?subject=LAN%20Scout%20Privacy`;
-      });
-    });
-  </script>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <span>LAN Scout</span>
+      <nav aria-label="Footer navigation">
+        <a href="../support/">Support</a>
+        <a href="./">Privacy</a>
+      </nav>
+    </div>
+  </footer>
+  <script src="../contact.js"></script>
 </body>
 </html>
