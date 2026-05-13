@@ -91,6 +91,24 @@ h1 {
   background: var(--accent);
 }
 
+.contact-button {
+  min-height: 44px;
+  margin: 6px 0 16px;
+  padding: 10px 16px;
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  color: #041615;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  background: var(--accent);
+}
+
+.contact-button:focus-visible {
+  outline: 3px solid rgba(86, 242, 205, 0.36);
+  outline-offset: 3px;
+}
+
 .doc {
   max-width: 760px;
 }
@@ -147,6 +165,12 @@ p {
   }
 
   .actions a:first-child {
+    color: #ffffff;
+    background: var(--accent-dark);
+    border-color: var(--accent-dark);
+  }
+
+  .contact-button {
     color: #ffffff;
     background: var(--accent-dark);
     border-color: var(--accent-dark);

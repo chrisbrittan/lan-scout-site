@@ -32,7 +32,16 @@
     <p>LAN Scout does not include advertising SDKs, tracking SDKs, or analytics SDKs.</p>
 
     <h2>Contact</h2>
-    <p>For support or privacy questions, contact <a href="mailto:chris@brittan.co">chris@brittan.co</a>.</p>
+    <p>For support or privacy questions, use the contact button below.</p>
+    <button class="contact-button" type="button" data-contact-local="support" data-contact-domain-a="brittan" data-contact-domain-b="co">Contact support</button>
   </main>
+  <script>
+    document.querySelectorAll(".contact-button").forEach((button) => {
+      button.addEventListener("click", () => {
+        const address = `${button.dataset.contactLocal}@${button.dataset.contactDomainA}.${button.dataset.contactDomainB}`;
+        window.location.href = `mailto:${address}?subject=LAN%20Scout%20Privacy`;
+      });
+    });
+  </script>
 </body>
 </html>

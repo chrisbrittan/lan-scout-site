@@ -11,7 +11,8 @@
   <main class="shell doc">
     <a class="back" href="../">LAN Scout</a>
     <h1>Support</h1>
-    <p class="lede compact">For help with LAN Scout, email <a href="mailto:chris@brittan.co">chris@brittan.co</a>.</p>
+    <p class="lede compact">For help with LAN Scout, use the support button below.</p>
+    <button class="contact-button" type="button" data-contact-local="support" data-contact-domain-a="brittan" data-contact-domain-b="co">Email support</button>
 
     <h2>Why does LAN Scout ask for Local Network access?</h2>
     <p>LAN Scout needs Local Network access to discover devices and services on the network your iPhone, iPad, or Mac is currently connected to.</p>
@@ -25,5 +26,13 @@
     <h2>Why are some devices missing names or vendors?</h2>
     <p>Some devices do not advertise hostnames or services, and some platforms restrict MAC address access. LAN Scout shows the best available details for each discovered device.</p>
   </main>
+  <script>
+    document.querySelectorAll(".contact-button").forEach((button) => {
+      button.addEventListener("click", () => {
+        const address = `${button.dataset.contactLocal}@${button.dataset.contactDomainA}.${button.dataset.contactDomainB}`;
+        window.location.href = `mailto:${address}?subject=LAN%20Scout%20Support`;
+      });
+    });
+  </script>
 </body>
 </html>
